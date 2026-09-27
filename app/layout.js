@@ -1,0 +1,1 @@
+import './globals.css'; export const metadata={title:'Tully & Smiths',description:'Commercial plumbing, joinery and project delivery.'}; export default function RootLayout({children}){return <html lang="en"><body>{children}</body></html>}
