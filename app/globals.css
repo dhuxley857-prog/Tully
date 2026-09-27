@@ -135,3 +135,26 @@ html.siteSwitching body{opacity:0}
 @media(prefers-reduced-motion:reduce){
  html body{opacity:1!important;transition:none!important}
 }
+
+/* Branded opening sequence */
+.siteIntro{position:fixed;inset:0;z-index:5000;background:#071116;display:flex;align-items:center;justify-content:center;animation:introExit .5s ease 1.9s forwards}
+.introBrand{text-align:center}
+.introName{font:400 clamp(38px,7vw,92px)/1 Georgia,serif;letter-spacing:.5px;color:#f3efe7;opacity:0;transform:translateY(10px);animation:introName .55s ease .12s forwards}
+.introName span,.curtainMark span{font-style:italic}
+.introDivisions{display:flex;justify-content:center;gap:36px;margin-top:25px;font-size:11px;letter-spacing:4px;color:#c9a96a}
+.introDivisions span{opacity:0;transform:translateY(7px)}
+.introDivisions span:first-child{animation:introDrop .42s ease .7s forwards}
+.introDivisions span:last-child{animation:introDrop .42s ease 1.05s forwards}
+@keyframes introName{to{opacity:1;transform:none}}
+@keyframes introDrop{to{opacity:1;transform:none}}
+@keyframes introExit{to{opacity:0;visibility:hidden}}
+
+/* Lower navigation transition */
+.sectionCurtain{position:fixed;inset:0;z-index:4500;background:#071116;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .18s ease,visibility 0s linear .18s;pointer-events:none}
+.curtainMark{font:400 clamp(28px,4vw,56px)/1 Georgia,serif;color:#f3efe7;letter-spacing:.5px;transform:translateY(5px);transition:transform .18s ease}
+html.sectionSwitching .sectionCurtain{opacity:1;visibility:visible;transition:opacity .18s ease}
+html.sectionSwitching .curtainMark{transform:none}
+@media(prefers-reduced-motion:reduce){
+ .siteIntro{display:none}
+ .sectionCurtain{display:none}
+}
