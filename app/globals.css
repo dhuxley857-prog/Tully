@@ -127,3 +127,11 @@ section[id]{scroll-margin-top:104px}
  .servicesHead h2{font-size:35px}
  #services{scroll-margin-top:126px!important}
 }
+
+/* Subtle Commercial / Residential transition */
+html body{opacity:0;transition:opacity .28s ease}
+html.siteReady body{opacity:1}
+html.siteSwitching body{opacity:0}
+@media(prefers-reduced-motion:reduce){
+ html body{opacity:1!important;transition:none!important}
+}
