@@ -2,11 +2,17 @@
 import {useEffect,useState} from 'react';
 
 export default function PageTransition(){
-  const [intro,setIntro]=useState(true);
+  const [intro,setIntro]=useState(false);
   useEffect(()=>{
     const isCommercialHome=window.location.pathname==='/';
-    if(!isCommercialHome){setIntro(false);return}
-    const t=setTimeout(()=>setIntro(false),2800);
+    if(!isCommercialHome) return;
+    setIntro(true);
+    document.documentElement.classList.add('introPlaying');
+    const t=setTimeout(()=>{
+      setIntro(false);
+      document.documentElement.classList.remove('introPlaying');
+      document.documentElement.classList.add('siteReady');
+    },3200);
     return ()=>clearTimeout(t);
   },[]);
   useEffect(()=>{
