@@ -114,3 +114,16 @@ section[id]{scroll-margin-top:104px}
  .servicesHead h2{font-size:35px}
  .servicesSection>.cards{padding:0}
 }
+
+/* Align Services with the site's standard light-section rhythm */
+.servicesSection{padding:75px 5.5% 85px!important}
+.servicesHead{max-width:720px;margin:0 0 38px}
+.servicesHead .eyebrow{margin-top:0}
+.servicesHead h2{font:400 44px/1.08 Georgia,serif;margin:10px 0 16px}
+.servicesHead>p:last-child{margin-bottom:0;color:#4d4b47;line-height:1.7}
+@media(max-width:760px){
+ .servicesSection{padding:58px 24px 60px!important}
+ .servicesHead{margin:0 0 32px}
+ .servicesHead h2{font-size:35px}
+ #services{scroll-margin-top:126px!important}
+}
