@@ -60,3 +60,17 @@ section[id]{scroll-margin-top:145px}
 .residentialCards .i02{background-image:url('https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=82')!important}
 .residentialCards .i03{background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=82')!important}
 @media(max-width:760px){html{scroll-padding-top:170px}section[id]{scroll-margin-top:170px}}
+
+/* Business positioning */
+.positioning{padding-top:82px;padding-bottom:76px}
+.positioning>h2{max-width:760px;margin-bottom:34px}
+.positioningGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:8%;max-width:1180px;padding-top:30px;border-top:1px solid rgba(7,17,22,.16)}
+.positioningGrid p{margin:0;line-height:1.75;color:#4d4b47}
+.positioningGrid .positionLead{font:400 25px/1.45 Georgia,serif;color:#111;max-width:480px}
+@media(max-width:760px){
+.positioning{padding-top:62px;padding-bottom:58px}
+.positioning>h2{margin-bottom:26px}
+.positioningGrid{grid-template-columns:1fr;gap:22px;padding-top:24px}
+.positioningGrid .positionLead{font-size:21px;line-height:1.45}
+.positioningGrid p{font-size:14px;line-height:1.7}
+}
