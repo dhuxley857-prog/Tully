@@ -4,12 +4,10 @@ import {useEffect,useState} from 'react';
 export default function PageTransition(){
   const [intro,setIntro]=useState(true);
   useEffect(()=>{
-    const seen=sessionStorage.getItem('tsIntroSeen');
-    if(seen){setIntro(false)} else {
-      sessionStorage.setItem('tsIntroSeen','1');
-      const t=setTimeout(()=>setIntro(false),2400);
-      return ()=>clearTimeout(t);
-    }
+    const isCommercialHome=window.location.pathname==='/';
+    if(!isCommercialHome){setIntro(false);return}
+    const t=setTimeout(()=>setIntro(false),2800);
+    return ()=>clearTimeout(t);
   },[]);
   useEffect(()=>{
     if(intro) return;
