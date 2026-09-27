@@ -74,3 +74,12 @@ section[id]{scroll-margin-top:145px}
 .positioningGrid .positionLead{font-size:21px;line-height:1.45}
 .positioningGrid p{font-size:14px;line-height:1.7}
 }
+
+/* Anchor landing refinement: account for fixed desktop/mobile headers */
+html{scroll-padding-top:104px}
+section[id]{scroll-margin-top:104px}
+@media(max-width:760px){
+  html{scroll-padding-top:138px}
+  section[id]{scroll-margin-top:138px}
+  #about,#services,#team,#projects,#contact{scroll-margin-top:138px}
+}
