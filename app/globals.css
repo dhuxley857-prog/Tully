@@ -92,3 +92,12 @@ section[id]{scroll-margin-top:104px}
     scroll-margin-top:126px;
   }
 }
+
+/* Unified mobile section landing position */
+@media(max-width:760px){
+  html{scroll-padding-top:0!important}
+  section[id]{scroll-margin-top:0!important}
+  #about,#services,#team,#projects,#contact{
+    scroll-margin-top:126px!important;
+  }
+}
