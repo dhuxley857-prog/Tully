@@ -101,3 +101,16 @@ section[id]{scroll-margin-top:104px}
     scroll-margin-top:126px!important;
   }
 }
+
+/* Services section heading */
+.servicesSection{background:#f3efe7;color:#111;padding:72px 5.5% 80px}
+.servicesHead{max-width:720px;margin-bottom:38px}
+.servicesHead h2{font:400 44px/1.08 Georgia,serif;margin:10px 0 16px}
+.servicesHead>p:last-child{max-width:650px;color:#4d4b47;line-height:1.7}
+.servicesSection>.cards{padding:0;display:grid}
+@media(max-width:760px){
+ .servicesSection{padding:58px 24px 60px}
+ .servicesHead{margin-bottom:32px}
+ .servicesHead h2{font-size:35px}
+ .servicesSection>.cards{padding:0}
+}
