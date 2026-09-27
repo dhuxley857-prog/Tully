@@ -83,3 +83,12 @@ section[id]{scroll-margin-top:104px}
   section[id]{scroll-margin-top:138px}
   #about,#services,#team,#projects,#contact{scroll-margin-top:138px}
 }
+
+/* Mobile anchor targets: place section heading directly below fixed two-tier nav */
+@media(max-width:760px){
+  html{scroll-padding-top:0}
+  #about,#services,#team,#projects,#contact{scroll-margin-top:0}
+  #about:target,#services:target,#team:target,#projects:target,#contact:target{
+    scroll-margin-top:126px;
+  }
+}
