@@ -158,3 +158,10 @@ html.sectionSwitching .curtainMark{transform:none}
  .siteIntro{display:none}
  .sectionCurtain{display:none}
 }
+
+/* Ensure opening brand renders independently of page fade */
+.siteIntro{opacity:1!important;visibility:visible!important}
+.siteIntro .introBrand{opacity:1!important}
+html.introPlaying body{opacity:1!important}
+html.introPlaying main{opacity:0}
+html.introPlaying .siteIntro{opacity:1!important;visibility:visible!important}
